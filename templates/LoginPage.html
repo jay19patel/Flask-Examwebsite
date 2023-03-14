@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<section class="vh-90" >
+        <div class="container py-5 h-100">
+          <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+              <div class="card shadow-2-strong" style="border-radius: 1rem;">
+                <div class="card-body p-5 text-center" style="background-color: #508bfc;">
+      
+                  <h3 class="mb-5 text-white">Login Here</h3>
+                  
+                  {% block message %}
+                  <h6 class="text-white text-center">{{message}}</h6>
+                  {% endblock message %}
+                    
+                <form action="/login" method="POST">
+                  <div class="form-outline mb-4">
+                    <input type="email" id="typeEmailX-2" class="form-control form-control-lg" placeholder=" Enter Email Id " name="loginemail"/>
+                  </div>
+      
+                  <div class="form-outline mb-4">
+                    <input type="password" id="typePasswordX-2" class="form-control form-control-lg" placeholder="Enter Privcy Password" name="loginpss"/>
+                  </div>
+
+      
+                  <button class="btn btn-warning  btn-lg btn-block" type="submit">Login</button>
+                </form>
+                  <hr class="my-4">
+                  <h6 class="text-white"> you have no account then register  <a href="/register" class="text-white">here </a></h6> 
+      
+                  <hr class="my-4">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+</section>
+{% endblock %}
+

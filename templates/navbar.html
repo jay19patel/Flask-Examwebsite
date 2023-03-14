@@ -1,0 +1,18 @@
+<div class="p-3 mb-2 bg-success text-white">
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+      <div class="text-white text-center">
+      {% for message in messages %}
+        {{ message }}
+      {% endfor %}
+      </div>
+    {% endif %}
+  {% endwith %}
+
+
+
+    <a href="/login"><button type="button" class="btn btn-info text-white" >Log In </button></a>
+    <a href="/register"><button type="button" class="btn btn-info text-white" >Register </button></a>
+    <a href="/"><button type="button" class="btn btn-dark text-white " >Home </button></a>
+    <a href="/logout"><button type="button" class="btn btn-dark text-white " >LogOut </button></a>
+</div>

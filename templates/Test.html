@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<section>
+   <h1>Test</h1>
+   {% if name %}
+   <hr><hr>
+   <h6>Candidate Name : {{name}}</h6>
+   <h6>Candidate Email : {{email}}</h6>
+   <h6>Candidate City  : {{city}}</h6>
+   <hr><hr>
+   {% else %}
+   <h1>YOU ARE NOT LOGIN BRO </h1>
+   {% endif %}
+   <h1> ---------------------------------------------------------------- </h1>
+   <form action="">
+   {% for qna in alldata %}
+   <h6>{{qna.quation}} <input type="text" name="myanswer"><hr></h6>
+   {% endfor%}
+   </form>
+   <a href="/"><button > Submit </button></a>
+   <h1> ---------------------------------------------------------------- </h1>
+
+</section>
+{% endblock %}
+

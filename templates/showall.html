@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<section>
+    <h1 class="text-center"> : TEACHER ADDMIN PANNEL  : </h1>
+    <hr>
+    <h2 class="text-center"> : MY QUATIONS   : </h2>
+    {% for qna in data %}
+    <hr><h4>My quation : {{qna.quation}}</h4>
+    {% endfor %}
+    
+</section>
+{% endblock %}
+

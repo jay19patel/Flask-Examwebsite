@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<section>
+
+    <div>
+        <h1 class="text-center"> Im Home page </h1>
+    </div>
+
+
+<hr><hr>
+    <h1 class=" text-center">Infinity Exam Center </h1>
+    {% if data == "TEACHER" %}
+    <h1 class="text-center"> TEACHER </h1>
+    <div class="text-center">
+        <a href="/dashbord"><button type="button" class="btn btn-success">Dash Bord </button></a>
+    </div>
+    <hr>
+    <div class="text-center">
+        <a href="/test"><button type="button" class="btn btn-success">Test</button></a>
+    </div>
+    <hr><hr>
+
+    {% else %}
+    <hr>
+    <div class="text-center">
+        <a href="/test"><button type="button" class="btn btn-success">Test</button></a>
+    </div>
+<hr><hr>
+    {% endif %}
+
+
+
+</section>
+{% endblock %}

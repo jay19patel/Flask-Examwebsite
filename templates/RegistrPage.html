@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<section class="vh-90" >
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+          <div class="card shadow-2-strong" style="border-radius: 1rem;">
+            <div class="card-body p-5 text-center" style="background-color: #508bfc;">
+  
+              <h3 class="mb-5 text-white">Register Here</h3>
+
+                {% block message %}
+                <h6 class="text-white text-center">{{message}}</h6>
+                {% endblock message %}
+
+              <form action="/register" method="POST">
+              <!-- name -->
+              <div class="form-outline mb-4">
+                <input type="text"  class="form-control form-control-lg" placeholder=" Enter Full Name" name="fullname"/>
+              </div>  
+               <!-- city -->
+               <div class="form-outline mb-4">
+                <input type="text"  class="form-control form-control-lg" placeholder=" Enter City Name " name="mycity"/>
+              </div>               
+              <!-- email  -->
+              <div class="form-outline mb-4">
+                <input type="email"  class="form-control form-control-lg" placeholder=" Enter Email Id " name="myemail"/>
+              </div>
+
+              <!-- Schoolid  -->
+              <div class="form-outline mb-4">
+                <input type="text"  class="form-control form-control-lg" placeholder=" Enter School Id" name="School_id"/>
+              </div>
+
+              <!-- password 1-->
+              <div class="form-outline mb-4">
+                <input type="password"  class="form-control form-control-lg" placeholder="Enter Privacy Password" name="pass1"/>
+              </div>
+
+              <!-- password 2-->
+              <div class="form-outline mb-4">
+                <input type="password"  class="form-control form-control-lg" placeholder="Enter Again Password" name="pass2"/>
+              </div>
+
+  
+              <button class="btn btn-warning  btn-lg btn-block" type="submit">Login</button>
+            </form>
+  
+              <hr class="my-4">
+              <h6 class="text-white">I have alredy account <a href="/login" class="text-white">Login here </a></h6>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+</section>
+{% endblock %}
+
